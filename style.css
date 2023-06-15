@@ -1,0 +1,109 @@
+.grid-container { /* setting up the container */
+    display: grid;
+    grid-template-columns:auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto ;
+    background-color:white;
+    grid-gap: 2px;
+    }
+    
+.grid-red { /* setting up all the different colour blocks */
+    background-color:coral;
+    text-align: center;
+    border: 1px solid black;
+    padding: 1vh;
+    font-size: 3vh;
+    color:black
+    }
+.grid-teal {
+    background-color:turquoise;
+    text-align: center;
+    border: 1px solid black;
+    padding: 1vh;
+    font-size: 3vh;
+    color:black
+    }
+.grid-white {
+    background-color:white;
+    text-align: center;
+    border: 1px solid black;
+    padding: 1vh;
+    font-size: 3vh;
+        }
+.grid-khaki {
+    background-color:khaki;
+    text-align: center;
+    border: 1px solid black;
+    padding: 1vh;
+    font-size: 3vh;
+}
+.grid-green {
+    background-color:limegreen;
+    text-align: center;
+    border: 1px solid black;
+    padding: 1vh;
+    font-size: 3vh;
+}
+
+.grid-gold {
+    background-color:gold;
+    text-align: center;
+    border: 1px solid black;
+    padding: 1vh;
+    font-size: 3vh;
+}
+.grid-purple {
+    background-color:plum;
+    text-align: center;
+    border: 1px solid black;
+    padding: 1vh;
+    font-size: 3vh;
+}
+
+.grid-lime {
+    background-color:lime;
+    text-align: center;
+    border: 1px solid black;
+    padding: 1vh;
+    font-size: 3vh;
+}
+.grid-pink {
+        background-color:lightsalmon;
+        text-align: center;
+        border: 1px solid black;
+        padding: 1vh;
+        font-size: 3vh;
+}
+
+.cell { /* the empty cells */
+    float: left;
+    position: relative;
+    width: 5.55%;
+    height: 100%;
+    visibility: hidden;
+      }
+#pic { /* the pic, not displayed */
+    display: none;
+}
+
+@media (max-width: 640px){  /* hiding the grid and showing the pic for a small screen */
+     .grid-container    {
+        display: none;  /* In response to the feedback on my previous submission, the grid never went off screen / scroll bar didnt appear */
+     }                  /* before changing to an image when I tested the code on my laptop. I have increased the break points in an attempt */
+    #pic {              /* to fix the error, unfortunately is is hard for me to check if it works, as it was already working on my screen. */
+        display: block;
+        height: 100%;
+    }
+    img { /* making the pic fit the screen */
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 768px){ /* adjusting the gaps on a smaller screen */
+    .grid-container {
+        grid-gap: 0px;
+    }
+    
+}
+
